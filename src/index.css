@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-p5-red: #D32F2F;
+  --color-p5-black: #121212;
+  --color-p5-white: #FFFFFF;
+  --color-p5-gray: #2A2A2A;
+  --color-p5-gold: #FFD700;
+}
+
+@layer base {
+  body {
+    @apply bg-p5-black text-p5-white font-sans overflow-x-hidden;
+  }
+
+  h1, h2, h3 {
+    @apply font-display uppercase tracking-tighter italic;
+  }
+}
+
+/* Custom P5 Slanted Shapes */
+.p5-slant {
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+
+.p5-slant-reverse {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+.p5-nav-item {
+  @apply relative px-8 py-2 font-display text-2xl transition-all duration-200 cursor-pointer;
+  transform: skewX(-15deg);
+}
+
+.p5-nav-item:hover {
+  @apply bg-p5-red text-p5-white scale-110 -translate-y-1;
+}
+
+.p5-card {
+  @apply bg-p5-white text-p5-black p-6 relative;
+  transform: skewY(-1deg);
+  box-shadow: 12px 12px 0px var(--color-p5-red);
+}
+
+/* Aggressive P5 Text Shadow */
+.p5-text-shadow {
+  text-shadow: 4px 4px 0px var(--color-p5-red);
+}
+
+.p5-text-shadow-white {
+  text-shadow: 4px 4px 0px #fff;
+}
+
+/* Scanline Effect */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 118, 0.02)
+  );
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes p5Slam {
+  0% { transform: scale(1.5) skewX(-15deg); opacity: 0; }
+  100% { transform: scale(1) skewX(-15deg); opacity: 1; }
+}
+
+.animate-p5-slam {
+  animation: p5Slam 0.25s ease forwards;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}

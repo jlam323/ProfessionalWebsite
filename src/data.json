@@ -1,0 +1,153 @@
+{
+  "personalInfo": {
+    "firstName": "JONATHAN",
+    "lastName": "LAM",
+    "role": "SENIOR SOFTWARE DEVELOPER | EX-AMAZON",
+    "location": "GREATER SEATTLE AREA",
+    "email": "JONATHAN.MH.LAM@HOTMAIL.COM",
+    "linkedin": "https://www.linkedin.com/in/jonathan-mh-lam",
+    "github": "https://github.com/jlam323",
+    "status": "EX-AMAZON | READY FOR INFILTRATION"
+  },
+  "about": {
+    "summary": "Passionate software developer with 9+ years of experience, specializing in designing, building, and scaling cloud-native, distributed systems.\n\nI love meeting new people and hearing about their unique experiences. I strongly believe that my personal success involves partnering with others and helping them succeed as well.\n\nOutside of the office, I'm a photographer, musician, and tech enthusiast. While I usually occupy myself with various little hobbies, I will always make time for a coffee with a friend or colleague!"
+  },
+  "projects": [
+    {
+      "title": "AIR NETWORK VISION",
+      "tags": ["GenAI", "Network Planning", "Optimization"],
+      "desc": "Composed the 5-year vision for Amazon Air's network planning systems, incorporating Generative AI for automation and optimizing cross-org integrations."
+    },
+    {
+      "title": "PLAN OF RECORD (POR)",
+      "tags": ["Real-time Messaging", "System Integration", "AWS"],
+      "desc": "Created a systematic integration standard for external airplane carriers to send real-time flight movement messages, enabling high-impact live decisions."
+    },
+    {
+      "title": "GLOBAL CARGO EXPANSION",
+      "tags": ["Business Growth", "International Dev", "React"],
+      "desc": "Led the dev-side expansion of US cargo flight business to Canada, Europe, and India, growing the business globally by ~285%."
+    }
+  ],
+  "experience": [
+    {
+      "company": "AMAZON - SDE III",
+      "role": "AIR TECH",
+      "period": "2023 - 2025",
+      "location": "SEATTLE, WA",
+      "bullets": [
+        "Composed the 5 year vision for Amazon Air's network planning systems, optimizing integrations and incorporating Generative AI.",
+        "Oversaw all team initiatives while leading cross-org integration of Air systems with science team optimization models.",
+        "Facilitated an annual cost savings of over $140MM through network planning optimization.",
+        "Orchestrated multiple peak operation preparations (ORR) as the org leader and bar raiser."
+      ],
+      "tags": ["GEN AI", "NETWORK PLANNING", "AWS", "OPTIMIZATION"]
+    },
+    {
+      "company": "AMAZON - SDE II",
+      "role": "AIR TECH",
+      "period": "2020 - 2023",
+      "location": "SEATTLE, WA",
+      "bullets": [
+        "Created the 'Plan of Record (POR)', a systematic integration standard for external airplane carriers to send real-time flight movement messages.",
+        "Led the dev-side expansion of the US cargo flight business to Canada, Europe, India, and intercontinental routes.",
+        "Grew the business globally by ~285% from 2019-2023 through strategic carrier integrations.",
+        "Established robust operational practices with monitoring, dashboards, and reliability-focused design."
+      ],
+      "tags": ["SYSTEM INTEGRATION", "GLOBAL EXPANSION", "AWS", "MONITORING"]
+    },
+    {
+      "company": "AMAZON - SDE I",
+      "role": "AIR TECH",
+      "period": "2019 - 2020",
+      "location": "SEATTLE, WA",
+      "bullets": [
+        "Built multiple foundational systems from scratch at the inception of Amazon Air's cargo shipping business.",
+        "Pioneered Native AWS development by being one of the earliest fully NAWS cloud-based systems in the org.",
+        "Championed ReactJS as the standard for all Air UI pages, driving large-scale migrations from legacy jQuery."
+      ],
+      "tags": ["REACT", "AWS", "SYSTEM DESIGN", "FOUNDATIONAL"]
+    },
+    {
+      "company": "TD BANK",
+      "role": "IT SOLUTIONS DEVELOPER ASSOCIATE",
+      "period": "2017 - 2019",
+      "location": "TORONTO, ON, CA",
+      "bullets": [
+        "Redesigned key functions into microservices, increasing speed and reusability for WebBroker.",
+        "Co-created a mobile payment splitting POC app in React Native, launched as a pilot to 5000 employees.",
+        "Developed an automated tool for managing web service certificate expiries, reducing production issues.",
+        "Led an associate project team of 11 to develop a full-stack tool revamping the associate program."
+      ],
+      "tags": ["REACT NATIVE", "MICROSERVICES", "SPRING BOOT", "ANGULAR"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "1ST PLACE - AMAZON AST GEN-AI HACKATHON",
+      "year": "2025",
+      "desc": "Winning team of the 2025 org-wide hackathon for Gen AI usage."
+    },
+    {
+      "title": "1ST PLACE - AMAZON AST GEN-AI HACKATHON",
+      "year": "2024",
+      "desc": "Winning team of the 2025 org-wide hackathon for Gen AI usage."
+    },
+    {
+      "title": "AMAZON AST WINGS AWARD RECIPIENT",
+      "year": "2023",
+      "desc": "Outstanding delivery of the automation efforts for the input of the Air science model 'A2ND'."
+    },
+    {
+      "title": "AMAZON AST WINGS AWARD RECIPIENT",
+      "year": "2020",
+      "desc": "Outstanding delivery for the EU expansion of the Air network."
+    },
+    {
+      "title": "NOMINATED - DEVELOPERS 30 UNDER 30",
+      "year": "2019",
+      "desc": "Nominated for Canada's prestigious recognition of emerging talent in software development."
+    },
+    {
+      "title": "TD BANK ACT FOR IMPACT AWARD RECIPIENT",
+      "year": "2019",
+      "desc": "Recognized for driving positive change and social impact through technical innovation."
+    },
+    {
+      "title": "TD BANK ABOVE AND BEYOND AWARD RECIPIENT",
+      "year": "2018",
+      "desc": "Awarded for exceptional contribution and leadership within the IT Solutions program."
+    },
+        {
+      "title": "2ND PLACE - GOOGLE CLOUD HACKATHON",
+      "year": "2018",
+      "desc": "Recognized for innovative cloud architecture and rapid prototyping of distributed systems."
+    },
+    {
+      "title": "1ST PLACE - TD'S LEVEL UP QUEST",
+      "year": "2018",
+      "desc": "Winner of the internal hackathon for developing high-impact fintech solutions."
+    }
+  ],
+  "skills": {
+    "languages": ["AWS", "JAVA", "JAVASCRIPT", "REACT", "SPRING", "PYTHON", "C++", "C#", "MYSQL", "DOCKER", "AZURE", "GCP"],
+    "specialties": [
+      "DISTRIBUTED SYSTEMS",
+      "CLOUD-NATIVE ARCHITECTURE",
+      "FULL-STACK DEVELOPMENT",
+      "SYSTEM INTEGRATION",
+      "GEN AI AUTOMATION",
+      "NETWORK PLANNING"
+    ]
+  },
+  "education": {
+    "degree": "B.S. COMPUTER SCIENCE",
+    "school": "WESTERN UNIVERSITY",
+    "location": "LONDON, ON, CANADA",
+    "class": "CLASS OF 2017",
+    "desc": "Specialization in Computer Science."
+  },
+  "contact": {
+    "quote": "We are going to steal your heart... or just have a quick chat about your next big project."
+  }
+}
