@@ -6,7 +6,7 @@ import { ThemeColors } from "../types";
 export function SkillsSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">SKILLS</h2>
+      <h2 className="text-3xl lg:text-6xl italic font-black leading-none mb-12 uppercase">SKILLS</h2>
       <div className="flex flex-wrap gap-4">
         {resumeData.skills.languages.map((skill, idx) => (
           <motion.div

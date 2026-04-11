@@ -16,7 +16,6 @@ import { ExperienceSection } from "./pages/ExperienceSection";
 import { ProjectsSection } from "./pages/ProjectsSection";
 import { AwardsSection } from "./pages/AwardsSection";
 import { SkillsSection } from "./pages/SkillsSection";
-import { EducationSection } from "./pages/EducationSection";
 import { ContactSection } from "./pages/ContactSection";
 
 export default function App() {
@@ -116,7 +115,6 @@ export default function App() {
               {activeSection === "projects" && <ProjectsSection currentTheme={currentTheme} />}
               {activeSection === "awards" && <AwardsSection currentTheme={currentTheme} />}
               {activeSection === "skills" && <SkillsSection currentTheme={currentTheme} />}
-              {activeSection === "education" && <EducationSection currentTheme={currentTheme} />}
               {activeSection === "contact" && <ContactSection currentTheme={currentTheme} />}
             </motion.div>
           </AnimatePresence>

@@ -23,7 +23,7 @@ export function Sidebar({ activeSection, setActiveSection, currentTheme, isColla
         height: isDesktop ? "100%" : (isCollapsed ? "80px" : "auto")
       }}
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-      className={`w-full lg:w-1/4 ${isCollapsed && isDesktop ? 'p-4' : 'p-6 lg:p-12'} flex flex-col justify-between bg-p5-black border-b-8 lg:border-b-0 lg:border-r-8 border-white relative overflow-hidden no-scrollbar transition-colors duration-1000 z-50`}
+      className={`w-full lg:w-1/4 ${isCollapsed && isDesktop ? 'p-4' : 'p-6 lg:p-12'} flex flex-col justify-between bg-p5-black border-b-8 lg:border-b-0 lg:border-r-8 border-white relative overflow-y-auto no-scrollbar transition-colors duration-1000 z-50`}
     >
       {/* Collapse Toggle Button */}
       <motion.button

@@ -12,7 +12,7 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
   return (
     <div className="flex flex-col h-full space-y-12">
       <div className="relative">
-        <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">EXPERIENCE</h2>
+        <h2 className="text-3xl lg:text-6xl italic font-black leading-none mb-12 uppercase">EXPERIENCE</h2>
         <motion.div 
           animate={{ backgroundColor: currentTheme.primary }}
           className="absolute -bottom-2 left-0 w-32 h-2 transform -skew-x-12"
@@ -20,7 +20,7 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
       </div>
       
       <div className="flex flex-col md:flex-row gap-0 flex-1 min-h-0">
-        {/* Company selector — slanted tabs */}
+        {/* Role selector — slanted tabs */}
         <div className="w-full md:w-[180px] flex-shrink-0 flex md:flex-col gap-3 p-2 md:pr-6 overflow-x-auto md:overflow-x-visible no-scrollbar">
           {experiences.map((exp, idx) => (
             <button
@@ -94,8 +94,8 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
               </div>
 
               <div className="relative">
-                <h3 className="text-4xl lg:text-5xl font-black italic transform -skew-x-6 p5-text-shadow leading-tight mb-2">
-                  {job.role}
+                <h3 className="text-3xl lg:text-4xl font-black italic transform -skew-x-6 p5-text-shadow leading-tight mb-2">
+                  {job.org}
                 </h3>
                 <motion.div 
                   animate={{ 
@@ -103,9 +103,9 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                     color: currentTheme.accent,
                     boxShadow: `4px 4px 0px ${currentTheme.primary}`
                   }}
-                  className="inline-block px-4 py-1 transform -skew-x-12 font-display text-lg font-black tracking-widest"
+                  className="inline-block px-4 py-1 transform -skew-x-8 font-display text-base font-black tracking-widest"
                 >
-                  {job.company}
+                  {job.role}
                 </motion.div>
               </div>
 

@@ -56,6 +56,8 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
         {/* The "Core" - Always visible but reacts to style */}
         <motion.div
           initial={{ scale: 0, rotate: -45 }}
+          onMouseEnter={() => setIsHoveringPrompt(true)}
+          onMouseLeave={() => setIsHoveringPrompt(false)}
           animate={{ 
             scale: 1, 
             rotate: (animStyle === "velvet" || animStyle === "confidant") ? 0 : -12,
@@ -90,8 +92,6 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
 
           {/* Floating Prompt Text */}
           <motion.div
-            onMouseEnter={() => setIsHoveringPrompt(true)}
-            onMouseLeave={() => setIsHoveringPrompt(false)}
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-max cursor-help"
@@ -122,7 +122,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
                       transition={{ duration: 0.3, repeat: Infinity }}
                       className="absolute -top-6 -left-4 bg-white text-black font-display font-black italic px-2 py-0.5 text-[10px] border-2 border-black shadow-[3px_3px_0px_#000]"
                     >
-                      LOOK!
+                      !!!
                     </motion.div>
                   </div>
                 </motion.div>

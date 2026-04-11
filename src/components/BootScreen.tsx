@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useBlink } from "../hooks/useBlink";
+import p5Background from "../assets/p5 background.png";
 
 export function BootScreen({ onComplete }: { onComplete: () => void }) {
   const [step, setStep] = useState(0);
@@ -29,6 +30,17 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
 
   return (
     <div className="bg-black h-screen flex flex-col justify-center px-16 lg:px-32 relative overflow-hidden">
+      {/* Background image fade-in */}
+      <motion.img 
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        src={p5Background} 
+        alt="" 
+        className="absolute top-0 right-0 h-full w-auto object-cover pointer-events-none z-0 "
+        referrerPolicy="no-referrer"
+      />
+
       {/* Background glitch effect */}
       <div className="absolute inset-0 opacity-5 pointer-events-none scanlines"></div>
       

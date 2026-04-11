@@ -6,7 +6,7 @@ import { ThemeColors } from "../types";
 export function ProjectsSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">PROJECTS</h2>
+      <h2 className="text-3xl lg:text-6xl italic font-black leading-none mb-12 uppercase">PROJECTS</h2>
       <div className="grid grid-cols-1 gap-12">
         {resumeData.projects.map((project, idx) => (
           <motion.div 

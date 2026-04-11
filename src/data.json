@@ -7,7 +7,7 @@
     "email": "JONATHAN.MH.LAM@HOTMAIL.COM",
     "linkedin": "https://www.linkedin.com/in/jonathan-mh-lam",
     "github": "https://github.com/jlam323",
-    "status": "EX-AMAZON | READY FOR INFILTRATION"
+    "status": "Fixing bugs I definitely didn’t write"
   },
   "about": {
     "summary": "Passionate software developer with 9+ years of experience, specializing in designing, building, and scaling cloud-native, distributed systems.\n\nI love meeting new people and hearing about their unique experiences. I strongly believe that my personal success involves partnering with others and helping them succeed as well.\n\nOutside of the office, I'm a photographer, musician, and tech enthusiast. While I usually occupy myself with various little hobbies, I will always make time for a coffee with a friend or colleague!"
@@ -31,9 +31,10 @@
   ],
   "experience": [
     {
-      "company": "AMAZON - SDE III",
-      "role": "AIR TECH",
-      "period": "2023 - 2025",
+      "company": "AMAZON",
+      "org": "AIR SCIENCE & TECH (AST)",
+      "role": "SDE III (SENIOR)",
+      "period": "Jul 2023 - Sep 2025",
       "location": "SEATTLE, WA",
       "bullets": [
         "Composed the 5 year vision for Amazon Air's network planning systems, optimizing integrations and incorporating Generative AI.",
@@ -44,9 +45,10 @@
       "tags": ["GEN AI", "NETWORK PLANNING", "AWS", "OPTIMIZATION"]
     },
     {
-      "company": "AMAZON - SDE II",
-      "role": "AIR TECH",
-      "period": "2020 - 2023",
+      "company": "AMAZON",
+      "org": "AIR SCIENCE & TECH (AST)",
+      "role": "SDE II",
+      "period": "Nov 2020 - Jul 2023",
       "location": "SEATTLE, WA",
       "bullets": [
         "Created the 'Plan of Record (POR)', a systematic integration standard for external airplane carriers to send real-time flight movement messages.",
@@ -57,9 +59,10 @@
       "tags": ["SYSTEM INTEGRATION", "GLOBAL EXPANSION", "AWS", "MONITORING"]
     },
     {
-      "company": "AMAZON - SDE I",
-      "role": "AIR TECH",
-      "period": "2019 - 2020",
+      "company": "AMAZON",
+      "org": "AIR SCIENCE & TECH (AST)",
+      "role": "SDE I",
+      "period": "Apr 2019 - Oct 2020",
       "location": "SEATTLE, WA",
       "bullets": [
         "Built multiple foundational systems from scratch at the inception of Amazon Air's cargo shipping business.",
@@ -70,8 +73,9 @@
     },
     {
       "company": "TD BANK",
+      "org": "WEBBROKER & PAYMENT INNOVATIONS",
       "role": "IT SOLUTIONS DEVELOPER ASSOCIATE",
-      "period": "2017 - 2019",
+      "period": "Jul 2017 - Mar 2019",
       "location": "TORONTO, ON, CA",
       "bullets": [
         "Redesigned key functions into microservices, increasing speed and reusability for WebBroker.",

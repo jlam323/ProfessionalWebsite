@@ -6,16 +6,17 @@ import { ThemeColors } from "../types";
 export function AwardsSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">AWARDS & ACHIEVEMENTS</h2>
+      <h2 className="text-3xl lg:text-5xl italic font-black leading-none mb-12 uppercase">AWARDS & ACHIEVEMENTS</h2>
       <div className="grid grid-cols-1 gap-8">
         {resumeData.awards.map((award, idx) => (
           <motion.div 
             key={idx}
             initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1, borderRightColor: currentTheme.primary }}
+            animate={{ x: 0, opacity: 1, borderRightColor: currentTheme.primary, borderLeftColor: currentTheme.primary }}
             transition={{ delay: idx * 0.1 }}
             whileHover={{ scale: 1.02, rotate: idx % 2 === 0 ? 0.5 : -0.5 }}
             className="p5-card border-r-[12px] group"
+
           >
             <div className="flex justify-between items-start mb-2">
               <motion.h3 

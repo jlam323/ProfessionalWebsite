@@ -6,7 +6,7 @@ import { ThemeColors } from "../types";
 export function ContactSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">CALLING CARD</h2>
+      <h2 className="text-3xl lg:text-6xl italic font-black leading-none mb-12 uppercase">CALLING CARD</h2>
       <motion.div 
         animate={{ boxShadow: `12px 12px 0px ${currentTheme.primary}` }}
         className="p5-card bg-p5-black text-white border-none"

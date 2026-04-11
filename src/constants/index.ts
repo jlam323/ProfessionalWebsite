@@ -17,7 +17,6 @@ export const SECTIONS: Section[] = [
   { id: "projects", label: "PROJECTS", icon: Star },
   { id: "awards", label: "AWARDS", icon: Trophy },
   { id: "skills", label: "SKILLS", icon: Code2 },
-  { id: "education", label: "STUDY", icon: GraduationCap },
   { id: "contact", label: "CONTACT", icon: Mail },
 ];
 
