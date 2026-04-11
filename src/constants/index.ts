@@ -8,7 +8,7 @@ import {
   Home,
   Mail
 } from "lucide-react";
-import { Section, AnimStyle, ThemeColors } from "../types";
+import { Section, AnimStyle, ThemeColors, HomeAnimation } from "../types";
 
 export const SECTIONS: Section[] = [
   { id: "home", label: "HOME", icon: Home },
@@ -26,6 +26,17 @@ export const TICKER_TEXT = [
   "[SUCCESS] Bug fixed after 3 hours",
   "[WARNING] Overthinking detected"
 ];
+
+export const HOME_ANIMATIONS: HomeAnimation[] = [
+  { id: "phantom", label: "PHANTOM", color: "#D32F2F" },
+  { id: "velvet", label: "VELVET", color: "#2563eb" },
+];
+  // Disabled
+  // { id: "mementos", label: "MEMENTOS", color: "#7f1d1d" },
+  // { id: "rebellion", label: "REBELLION", color: "#06b6d4" },
+  // { id: "confidant", label: "CONFIDANT", color: "#d97706" },
+  // { id: "cognitive", label: "COGNITIVE", color: "#9333ea" },
+  // { id: "showtime", label: "SHOWTIME", color: "#D32F2F" }
 
 export const THEME_COLORS: Record<AnimStyle, ThemeColors> = {
   phantom: { primary: "#D32F2F", secondary: "#000000", accent: "#FFD700" },

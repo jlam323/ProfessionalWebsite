@@ -9,6 +9,7 @@ import { RebellionAnimation } from "../components/animations/RebellionAnimation"
 import { ConfidantAnimation } from "../components/animations/ConfidantAnimation";
 import { CognitiveAnimation } from "../components/animations/CognitiveAnimation";
 import { ShowtimeAnimation } from "../components/animations/ShowtimeAnimation";
+import { HOME_ANIMATIONS } from "../constants";
 
 interface HomeSectionProps {
   animStyle: AnimStyle;
@@ -23,15 +24,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
     <div className="h-full flex flex-col items-center justify-center relative py-12">
       {/* Style Switcher */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-50 flex flex-wrap justify-center gap-4 max-w-4xl">
-        {[
-          { id: "phantom", label: "PHANTOM", color: "#D32F2F" },
-          { id: "velvet", label: "VELVET", color: "#2563eb" },
-          { id: "mementos", label: "MEMENTOS", color: "#7f1d1d" },
-          { id: "rebellion", label: "REBELLION", color: "#06b6d4" },
-          { id: "confidant", label: "CONFIDANT", color: "#d97706" },
-          { id: "cognitive", label: "COGNITIVE", color: "#9333ea" },
-          { id: "showtime", label: "SHOWTIME", color: "#D32F2F" }
-        ].map((style) => (
+        {HOME_ANIMATIONS.map((style) => (
           <button
             key={style.id}
             onClick={() => setAnimStyle(style.id as AnimStyle)}
@@ -78,8 +71,8 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
             }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            <Star size={80} className="text-white fill-current mb-4" />
-            <h2 className="text-6xl font-black italic text-white leading-none p5-text-shadow uppercase">
+            <Star className="text-white fill-current mb-4 w-12 h-12 lg:w-20 lg:h-20" />
+            <h2 className="text-4xl lg:text-6xl font-black italic text-white leading-none p5-text-shadow uppercase">
               {animStyle === "velvet" ? "VELVET" : 
                animStyle === "mementos" ? "MEMENTOS" :
                animStyle === "rebellion" ? "REBELLION" :
@@ -109,7 +102,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
                   initial={{ opacity: 0, x: 50, scale: 0.5 }}
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   exit={{ opacity: 0, x: 50, scale: 0.5 }}
-                  className="absolute -left-48 top-[-280px] pointer-events-none z-50"
+                  className="hidden lg:block absolute -left-48 top-[-280px] pointer-events-none z-50"
                 >
                   <div className="relative">
                     <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +129,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
               )}
             </AnimatePresence>
 
-            <div className={`text-white px-6 py-2 font-display font-black italic tracking-widest transform -skew-x-12 shadow-[4px_4px_0px_#FFD700] ${
+            <div className={`text-white px-4 py-1 lg:px-6 lg:py-2 font-display font-black italic tracking-widest transform -skew-x-12 shadow-[4px_4px_0px_#FFD700] ${
               animStyle === "velvet" ? "bg-blue-800" : 
               animStyle === "mementos" ? "bg-red-950" :
               animStyle === "rebellion" ? "bg-cyan-900" :
@@ -144,7 +137,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
               animStyle === "cognitive" ? "bg-purple-900" :
               "bg-p5-black"
             }`}>
-              SELECT YOUR INFILTRATION POINT
+              <div className="text-[10px] lg:text-xs">SELECT YOUR INFILTRATION POINT</div>
             </div>
           </motion.div>
         </motion.div>

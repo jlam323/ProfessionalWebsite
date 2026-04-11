@@ -13,3 +13,9 @@ export interface Section {
   label: string;
   icon: LucideIcon;
 }
+
+export interface HomeAnimation {
+  id: string;
+  label: string;
+  color: string;
+}

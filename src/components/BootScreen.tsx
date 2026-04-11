@@ -6,10 +6,10 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
   const [step, setStep] = useState(0);
   const blink = useBlink(400);
   const lines = [
-    "PERSONA SYSTEM v5.0 AESTHETIC",
     "COFFEE CUP FILLED",
-    "METAVERSE CALIBRATED",
     "COGNITIVE SCAN OK",
+    "METAVERSE CALIBRATED",
+    "PERSONA SYSTEM v5.0 LOADED",
     "ONLINE - BEGINNING DIVE..."
   ];
 

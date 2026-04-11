@@ -6,7 +6,7 @@ export function AboutSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
       <div className="relative">
-        <h2 className="text-6xl lg:text-7xl italic font-black leading-none mb-4 uppercase">ABOUT ME</h2>
+        <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-4 uppercase">ABOUT ME</h2>
         <motion.div 
           animate={{ borderColor: currentTheme.primary }}
           className="absolute -top-4 -left-4 w-full h-full border-4 -z-10 transform -rotate-1"
@@ -35,7 +35,7 @@ export function AboutSection({ currentTheme }: { currentTheme: ThemeColors }) {
         <motion.div 
           whileHover={{ scale: 1.02, rotate: -1 }}
           animate={{ boxShadow: `8px 8px 0px ${currentTheme.primary}` }}
-          className="bg-p5-black text-white p-6 transform -skew-x-3"
+          className="bg-p5-black text-white p-4 lg:p-6 transform -skew-x-3"
         >
           <motion.h3 
             animate={{ borderBottomColor: currentTheme.primary }}
@@ -48,7 +48,7 @@ export function AboutSection({ currentTheme }: { currentTheme: ThemeColors }) {
         <motion.div 
           whileHover={{ scale: 1.02, rotate: 1 }}
           animate={{ backgroundColor: currentTheme.primary }}
-          className="text-white p-6 transform skew-x-3 shadow-[8px_8px_0px_#000]"
+          className="text-white p-4 lg:p-6 transform skew-x-3 shadow-[8px_8px_0px_#000]"
         >
           <h3 className="text-xl mb-4 border-b-2 border-white inline-block">STATUS</h3>
           <p className="font-mono text-base uppercase tracking-tighter">{resumeData.personalInfo.status}</p>

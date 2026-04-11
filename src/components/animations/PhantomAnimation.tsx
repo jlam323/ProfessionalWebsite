@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export function PhantomAnimation() {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   return (
     <motion.div
       key="phantom-anim"
@@ -39,19 +42,9 @@ export function PhantomAnimation() {
             delay: i * 0.2,
             ease: "easeInOut"
           }}
-          className="absolute w-12 h-12 bg-p5-black transform -skew-x-12"
+          className={isDesktop ? "absolute w-12 h-12 bg-p5-black transform -skew-x-12" : "absolute w-6 h-6 bg-p5-black transform -skew-x-12"}
         />
       ))}
-
-      {/* Layer 3: Pulsing Halftone Circle */}
-      <motion.div
-        animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.6, 0.3]
-        }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-64 h-64 rounded-full bg-[radial-gradient(#D32F2F_2px,transparent_2px)] [background-size:12px_12px]"
-      />
     </motion.div>
   );
 }

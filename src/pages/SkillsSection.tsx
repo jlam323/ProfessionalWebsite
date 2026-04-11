@@ -6,7 +6,7 @@ import { ThemeColors } from "../types";
 export function SkillsSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-6xl lg:text-7xl italic font-black leading-none mb-12 uppercase">SKILLS</h2>
+      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">SKILLS</h2>
       <div className="flex flex-wrap gap-4">
         {resumeData.skills.languages.map((skill, idx) => (
           <motion.div
@@ -27,7 +27,7 @@ export function SkillsSection({ currentTheme }: { currentTheme: ThemeColors }) {
       
       <div className="mt-24 relative">
         <div className="absolute inset-0 bg-p5-black transform -skew-y-1 -z-10"></div>
-        <div className="p-12 text-white">
+        <div className="p-6 lg:p-12 text-white">
           <motion.h3 
             animate={{ decorationColor: currentTheme.primary }}
             className="text-4xl mb-8 italic underline underline-offset-8"

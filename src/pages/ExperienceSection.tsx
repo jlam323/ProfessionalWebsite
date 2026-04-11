@@ -12,7 +12,7 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
   return (
     <div className="flex flex-col h-full space-y-12">
       <div className="relative">
-        <h2 className="text-6xl lg:text-7xl italic font-black leading-none mb-12 uppercase">EXPERIENCE</h2>
+        <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">EXPERIENCE</h2>
         <motion.div 
           animate={{ backgroundColor: currentTheme.primary }}
           className="absolute -bottom-2 left-0 w-32 h-2 transform -skew-x-12"
@@ -26,7 +26,7 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
             <button
               key={idx}
               onClick={() => setActiveExp(idx)}
-              className={`px-6 py-4 transition-all relative cursor-pointer transform -skew-x-12 border-l-8 text-left group ${
+              className={`px-4 py-3 lg:px-6 lg:py-4 transition-all relative cursor-pointer transform -skew-x-12 border-l-8 text-left group ${
                 activeExp === idx 
                   ? "border-white shadow-[8px_8px_0px_#000] z-10" 
                   : "bg-p5-black border-p5-red/30 opacity-60 hover:opacity-100"

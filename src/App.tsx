@@ -24,6 +24,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [animStyle, setAnimStyle] = useState<AnimStyle>("phantom");
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   const currentTheme = THEME_COLORS[animStyle];
 
@@ -88,14 +89,16 @@ export default function App() {
           activeSection={activeSection} 
           setActiveSection={setActiveSection} 
           currentTheme={currentTheme} 
+          isCollapsed={isSidebarCollapsed}
+          setIsCollapsed={setIsSidebarCollapsed}
         />
 
         {/* Right Side: Content Area */}
-        <main className="flex-1 overflow-y-auto p-12 lg:p-24 bg-white text-p5-black relative">
+        <main className="flex-1 overflow-y-auto p-6 lg:p-24 bg-white text-p5-black relative">
           {/* Dynamic Background Elements */}
           <motion.div 
             animate={{ backgroundColor: currentTheme.primary }}
-            className="fixed top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none transform skew-x-12 translate-x-1/4"
+            className="hidden lg:block fixed top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none transform skew-x-12 translate-x-1/4"
           ></motion.div>
           
           <AnimatePresence mode="wait">
@@ -119,7 +122,7 @@ export default function App() {
           </AnimatePresence>
 
           {/* Floating Decorative Text */}
-          <div className="fixed bottom-8 right-8 pointer-events-none select-none opacity-5 font-display text-9xl rotate-90 origin-bottom-right">
+          <div className="hidden lg:block fixed bottom-8 right-8 pointer-events-none select-none opacity-5 font-display text-9xl rotate-90 origin-bottom-right">
             TAKE YOUR HEART
           </div>
         </main>

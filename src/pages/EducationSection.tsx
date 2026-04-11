@@ -5,7 +5,7 @@ import { ThemeColors } from "../types";
 export function EducationSection({ currentTheme }: { currentTheme: ThemeColors }) {
   return (
     <div className="space-y-16">
-      <h2 className="text-6xl lg:text-7xl italic font-black leading-none mb-12 uppercase">STUDY</h2>
+      <h2 className="text-4xl lg:text-7xl italic font-black leading-none mb-12 uppercase">STUDY</h2>
       <motion.div 
         whileHover={{ skewY: -0.5 }}
         animate={{ borderRightColor: currentTheme.primary }}
