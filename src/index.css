@@ -38,7 +38,8 @@
 }
 
 .p5-nav-item:hover {
-  @apply bg-p5-red text-p5-white scale-110 -translate-y-1;
+  background-color: var(--color-p5-red);
+  @apply text-p5-white scale-110 -translate-y-1;
 }
 
 .p5-card {
