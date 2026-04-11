@@ -14,15 +14,29 @@ export function AwardsSection({ currentTheme }: { currentTheme: ThemeColors }) {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1, borderRightColor: currentTheme.primary, borderLeftColor: currentTheme.primary }}
             transition={{ delay: idx * 0.1 }}
-            whileHover={{ scale: 1.02, rotate: idx % 2 === 0 ? 0.5 : -0.5 }}
-            className="p5-card border-r-[12px] group"
-
+            whileHover="hover"
+            variants={{
+              hover: { scale: 1.02, rotate: idx % 2 === 0 ? 0.5 : -0.5 }
+            }}
+            className="p5-card border-r-[12px] group max-w-3xl"
           >
             <div className="flex justify-between items-start mb-2">
               <motion.h3 
-                whileHover={{ color: currentTheme.primary }}
-                className="text-xl lg:text-2xl transition-colors leading-tight"
+                variants={{
+                  hover: { color: currentTheme.primary }
+                }}
+                className="text-xl lg:text-2xl transition-colors leading-tight flex items-center flex-wrap gap-y-2"
               >
+                <motion.span 
+                  animate={{ 
+                    backgroundColor: currentTheme.secondary === "#000000" ? "#000" : currentTheme.primary,
+                    color: "white",
+                    boxShadow: `3px 3px 0px ${currentTheme.primary}`
+                  }}
+                  className="inline-block px-3 py-0.5 transform -skew-x-12 font-display text-[14px] font-black tracking-widest mr-3 italic"
+                >
+                  {award.ranking}
+                </motion.span>
                 {award.title}
               </motion.h3>
 

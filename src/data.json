@@ -88,47 +88,56 @@
   ],
   "awards": [
     {
-      "title": "1ST PLACE - AMAZON AST GEN-AI HACKATHON",
+      "title": "AMAZON AST GEN-AI HACKATHON",
+      "ranking": "1ST PLACE",
       "year": "2025",
       "desc": "Winning team of the 2025 org-wide hackathon for Gen AI usage."
     },
     {
-      "title": "2ND PLACE - AMAZON AST GEN-AI HACKATHON",
+      "title": "AMAZON AST GEN-AI HACKATHON",
+      "ranking": "2ND PLACE",
       "year": "2024",
       "desc": "Runner-up team for the 2024 org-wide hackathon for Gen AI usage."
     },
     {
-      "title": "AMAZON AST WINGS AWARD RECIPIENT",
+      "title": "AMAZON AST WINGS AWARD",
+      "ranking": "RECIPIENT",
       "year": "2023",
       "desc": "Outstanding delivery of the automation efforts for the input of the Air science model 'A2ND'."
     },
     {
-      "title": "AMAZON AST WINGS AWARD RECIPIENT",
+      "title": "AMAZON AST WINGS AWARD",
+      "ranking": "RECIPIENT",
       "year": "2020",
       "desc": "Outstanding delivery for the EU expansion of the Air network."
     },
     {
-      "title": "NOMINATED - DEVELOPERS 30 UNDER 30",
+      "title": "DEVELOPERS 30 UNDER 30",
+      "ranking": "NOMINATED",
       "year": "2019",
       "desc": "Nominated for Canada's prestigious recognition of emerging talent in software development."
     },
     {
-      "title": "TD BANK ACT FOR IMPACT AWARD RECIPIENT",
+      "title": "TD BANK ACT FOR IMPACT AWARD",
+      "ranking": "RECIPIENT",
       "year": "2019",
       "desc": "Recognized for driving positive change and social impact through technical innovation."
     },
     {
-      "title": "TD BANK ABOVE AND BEYOND AWARD RECIPIENT",
+      "title": "TD BANK ABOVE AND BEYOND AWARD",
+      "ranking": "RECIPIENT",
       "year": "2018",
       "desc": "Awarded for exceptional contribution and leadership within the IT Solutions program."
     },
         {
-      "title": "2ND PLACE - GOOGLE CLOUD HACKATHON",
+      "title": "GOOGLE CLOUD HACKATHON",
+      "ranking": "2ND PLACE",
       "year": "2018",
       "desc": "Recognized for innovative cloud architecture and rapid prototyping of distributed systems."
     },
     {
       "title": "1ST PLACE - TD'S LEVEL UP QUEST",
+      "ranking": "1ST PLACE",
       "year": "2018",
       "desc": "Winner of the internal hackathon for developing high-impact fintech solutions."
     }

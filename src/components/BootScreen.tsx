@@ -33,11 +33,11 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
       {/* Background image fade-in */}
       <motion.img 
         initial={{ opacity: 0, scale: 1.1 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 0.75, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         src={p5Background} 
         alt="" 
-        className="absolute top-0 right-0 h-full w-auto object-cover pointer-events-none z-0 "
+        className="hidden lg:block absolute top-0 right-0 h-full w-auto object-cover pointer-events-none z-0 origin-right"
         referrerPolicy="no-referrer"
       />
 

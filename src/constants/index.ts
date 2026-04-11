@@ -11,7 +11,6 @@ import {
 import { Section, AnimStyle, ThemeColors, HomeAnimation } from "../types";
 
 export const SECTIONS: Section[] = [
-  { id: "home", label: "HOME", icon: Home },
   { id: "about", label: "ABOUT", icon: User },
   { id: "experience", label: "EXPERIENCE", icon: Briefcase },
   { id: "projects", label: "PROJECTS", icon: Star },

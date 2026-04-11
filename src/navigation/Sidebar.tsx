@@ -60,16 +60,19 @@ export function Sidebar({ activeSection, setActiveSection, currentTheme, isColla
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="text-4xl lg:text-5xl leading-[0.8] mb-4 italic font-black p5-text-shadow">
+              <h1 
+                onClick={() => setActiveSection("home")}
+                className="text-4xl lg:text-5xl leading-[0.8] mb-4 italic font-black p5-text-shadow cursor-pointer group/name transition-transform hover:scale-105 active:scale-95 origin-left"
+              >
                 {resumeData.personalInfo.firstName}<br />
                 <motion.span 
                   animate={{ color: currentTheme.primary }}
-                  className="bg-white px-3 inline-block transform -skew-x-12 mt-2 p5-text-shadow-white shadow-[8px_8px_0px_#000]"
+                  className="bg-white px-3 inline-block transform -skew-x-12 mt-2 p5-text-shadow-white shadow-[8px_8px_0px_#000] group-hover/name:shadow-[12px_12px_0px_#000] transition-shadow"
                 >
                   {resumeData.personalInfo.lastName}
                 </motion.span>
               </h1>
-              <div className="flex items-center gap-4 mt-6">
+              <div className="flex items-center gap-4 mt-4">
                 <motion.div 
                   animate={{ backgroundColor: currentTheme.primary }}
                   className="w-12 h-0.5"
@@ -82,7 +85,7 @@ export function Sidebar({ activeSection, setActiveSection, currentTheme, isColla
           )}
         </AnimatePresence>
 
-        <nav className={`mt-8 lg:mt-20 flex lg:flex-col flex-wrap gap-4 lg:gap-0 lg:space-y-8 ${isCollapsed ? 'items-center' : ''}`}>
+        <nav className={`mt-4 lg:mt-10 flex lg:flex-col flex-wrap gap-4 lg:gap-0 lg:space-y-8 ${isCollapsed ? 'items-center' : ''}`}>
           {!isCollapsed && SECTIONS.map((section: Section, idx: number) => (
             <motion.div
               key={section.id}
