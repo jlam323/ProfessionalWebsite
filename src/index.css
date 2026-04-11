@@ -57,6 +57,14 @@
   text-shadow: 4px 4px 0px #fff;
 }
 
+.p5-text-shadow-tight {
+  text-shadow: 2px 2px 0px var(--color-p5-red);
+}
+
+.p5-text-shadow-white-tight {
+  text-shadow: 2px 2px 0px #fff;
+}
+
 /* Scanline Effect */
 .scanlines {
   position: relative;

@@ -21,7 +21,7 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
       
       <div className="flex flex-col md:flex-row gap-0 flex-1 min-h-0">
         {/* Role selector — slanted tabs */}
-        <div className="w-full md:w-[180px] flex-shrink-0 flex md:flex-col gap-3 p-2 md:pr-6 overflow-x-auto md:overflow-x-visible no-scrollbar">
+        <div className="w-full md:w-[200px] flex-shrink-0 flex md:flex-col gap-3 p-2 md:pr-6 overflow-x-auto md:overflow-x-visible no-scrollbar">
           {experiences.map((exp, idx) => (
             <button
               key={idx}
@@ -93,17 +93,17 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                 ></motion.div>
               </div>
 
-              <div className="relative">
-                <h3 className="text-3xl lg:text-4xl font-black italic transform -skew-x-6 p5-text-shadow leading-tight mb-2">
+              <div className="relative z-10">
+                <h3 className="text-3xl lg:text-4xl font-black italic transform -skew-x-6 p5-text-shadow-tight leading-[0.9] mb-4">
                   {job.org}
                 </h3>
                 <motion.div 
                   animate={{ 
-                    backgroundColor: currentTheme.secondary === "#000000" ? "#000" : currentTheme.primary, 
-                    color: currentTheme.accent,
-                    boxShadow: `4px 4px 0px ${currentTheme.primary}`
+                    backgroundColor: currentTheme.primary, 
+                    color: "white",
+                    boxShadow: `4px 4px 0px #000`
                   }}
-                  className="inline-block px-4 py-1 transform -skew-x-8 font-display text-base font-black tracking-widest"
+                  className="inline-block px-4 py-2 transform -skew-x-12 font-display text-sm lg:text-base font-black tracking-tighter"
                 >
                   {job.role}
                 </motion.div>
@@ -135,11 +135,19 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex gap-4 items-start"
                   >
-                    <div className="mt-1.5 flex-shrink-0">
-                      <motion.div 
-                        animate={{ backgroundColor: currentTheme.primary }}
-                        className="w-3 h-3 transform rotate-45"
-                      ></motion.div>
+                    <div className="mt-1 flex-shrink-0">
+                      <div className="relative">
+                        <motion.div 
+                          animate={{ backgroundColor: currentTheme.primary }}
+                          className="w-6 h-6 transform -skew-x-12 flex items-center justify-center shadow-[3px_3px_0px_#000]"
+                        >
+                          <Star size={14} className="fill-white text-white" />
+                        </motion.div>
+                        <motion.div 
+                          animate={{ backgroundColor: currentTheme.accent }}
+                          className="absolute -top-1 -right-1 w-2 h-2 transform rotate-45 opacity-50"
+                        />
+                      </div>
                     </div>
                     <p className="font-mono text-sm text-p5-black font-bold leading-relaxed bg-p5-white/90 p-2 transform -skew-x-1 shadow-[4px_4px_0px_#000] w-full">
                       {bullet}
