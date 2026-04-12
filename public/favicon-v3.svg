@@ -1,0 +1,24 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+    <path d="M100,10 L120,50 L160,30 L145,80 L190,100 L145,120 L160,170 L120,150 L100,190 L80,150 L40,170 L55,120 L10,100 L55,80 L40,30 L80,50 Z" fill="black" />
+  <path d="M100,25 L115,55 L145,40 L135,75 L170,100 L135,125 L145,160 L115,145 L100,175 L85,145 L55,160 L65,125 L30,100 L65,75 L55,40 L85,55 Z" fill="#e60023" />
+  
+  <!-- V3: The Star Thief -->
+  <rect width="200" height="200" fill="transparent"/>
+    <path d="M100,0 L110,80 L200,50 L120,100 L180,180 L100,120 L20,180 L80,100 L0,50 L90,80 Z" fill="white" />
+  <path d="M100,20 L108,85 L180,60 L115,100 L160,160 L100,115 L40,160 L85,100 L20,60 L92,85 Z" fill="#e60023" />
+  <!-- Circular Jagged Burst -->
+  <path d="M100,20 L110,60 L150,50 L130,80 L180,100 L130,120 L150,150 L110,140 L100,180 L90,140 L50,150 L70,120 L20,100 L70,80 L50,50 L90,60 Z" fill="#e60023" />
+  <path d="M100,40 L108,70 L130,65 L120,85 L160,100 L120,115 L130,135 L108,130 L100,160 L92,130 L70,135 L80,115 L40,100 L80,85 L70,65 L92,70 Z" fill="black" />
+  
+  <!-- Text -->
+  <text x="100" y="130" font-family="Arial Black, sans-serif" font-size="90" fill="black" text-anchor="middle" transform="skewX(-20)" stroke="white" stroke-width="2">JL</text>
+  
+  <!-- Many Stars -->
+  <g fill="red">
+    <path d="M170,40 L172,45 L177,47 L172,49 L170,54 L168,49 L163,47 L168,45 Z" />
+    <path d="M30,50 L32,55 L37,57 L32,59 L30,64 L28,59 L23,57 L28,55 Z" />
+    <path d="M160,150 L162,155 L167,157 L162,159 L160,164 L158,159 L153,157 L158,155 Z" />
+    <path d="M40,160 L42,165 L47,167 L42,169 L40,174 L38,169 L33,167 L38,165 Z" />
+  </g>
+</svg>

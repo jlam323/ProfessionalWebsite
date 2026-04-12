@@ -100,6 +100,22 @@ export default function App() {
             className="hidden lg:block fixed top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none transform skew-x-12 translate-x-1/4"
           ></motion.div>
           
+          {/* Temporary Logo Preview Section */}
+          {/*
+            <div className="fixed bottom-4 right-4 z-[100] bg-black/80 p-4 border-2 border-white flex flex-col gap-4 items-center">
+              <p className="text-white font-display font-black italic text-[10px] tracking-widest">LOGO OPTIONS:</p>
+              <div className="flex gap-4">
+                {[1, 2, 3].map(v => (
+                  <div key={v} className="flex flex-col items-center gap-1">
+                    <img src={`/favicon-v${v}.svg`} alt={`Option ${v}`} className={`w-12 h-12 border ${v === 3 ? 'border-p5-red border-2' : 'border-white/20'} bg-black`} />
+                    <span className={`text-white text-[8px] font-mono ${v === 3 ? 'text-p5-red font-bold' : ''}`}>V{v} {v === 3 ? '(ACTIVE)' : ''}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-white/50 text-[8px] font-mono">Keeping all 3 versions for now.</p>
+            </div>
+          */}
+
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection}

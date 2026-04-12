@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PHANTOM PERSONA - Interactive Portfolio
 
-# Run and deploy your AI Studio app
+An interactive, high-fidelity portfolio application inspired by the **Persona 5** aesthetic. This project showcases a professional resume through a stylized, dynamic interface featuring custom animations, theme switching, and a unique "Confidant" inspired design.
 
-This contains everything you need to run your app locally.
+## 🎭 Features
 
-View your app in AI Studio: https://ai.studio/apps/9904503d-eba5-4497-a038-d7a1339d1538
+- **Persona 5 Aesthetic**: High-contrast UI, skewed elements, and signature "Confidant" style layouts.
+- **Interactive Navigation**: Sidebar navigation with real-time section switching and a unique "Home" navigation pattern.
+- **Dynamic Theming**: Switch between different visual styles (e.g., "Phantom", "Velvet") that update the entire application's color palette and animations.
+- **Boot Sequence**: A stylized loading screen with system calibration logs and a progress bar.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop views with adaptive layouts and scaling.
+- **Rich Animations**: Powered by Framer Motion for smooth transitions, "slam" effects, and interactive hover states.
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 
+## 🚀 Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd phantom-persona
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+## 📄 License
+
+This project is licensed under the MIT License.
