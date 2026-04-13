@@ -18,6 +18,7 @@ import { ProjectsSection } from "./pages/ProjectsSection";
 import { AwardsSection } from "./pages/AwardsSection";
 import { SkillsSection } from "./pages/SkillsSection";
 import { ContactSection } from "./pages/ContactSection";
+import { cutInMap } from "./assets/cutInAssets";
 
 export default function App() {
   const [isBooting, setIsBooting] = useState(true);
@@ -31,13 +32,13 @@ export default function App() {
 
   const triggerCutIn = useCallback(() => {
     const randomNum = Math.floor(Math.random() * 27) + 1;
-    const imgUrl = new URL(`./assets/cut-in-${randomNum}.webp`, import.meta.url).href;
+    const imgUrl = cutInMap[randomNum];
     
-    // The images are already preloaded in the BootScreen, 
-    // but we still set the state to trigger the animation
-    setCutInImage(imgUrl);
-    setCutInKey(prev => prev + 1);
-    setShowCutIn(true);
+    if (imgUrl) {
+      setCutInImage(imgUrl);
+      setCutInKey(prev => prev + 1);
+      setShowCutIn(true);
+    }
   }, []);
 
   const handleCutInComplete = useCallback(() => {

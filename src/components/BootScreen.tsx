@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useBlink } from "../hooks/useBlink";
-import p5Background from "../assets/p5 background.png";
+import { cutInMap } from "../assets/cutInAssets";
 
 export function BootScreen({ onComplete }: { onComplete: () => void }) {
   const [step, setStep] = useState(0);
@@ -12,7 +12,7 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
     "COFFEE CUP FILLED",
     "COGNITIVE SCAN OK",
     "METAVERSE CALIBRATED",
-    `PERSONA SYSTEM v5.0 LOADED (${Math.round((loadedCount / 27) * 100)}%)`,
+    `PERSONA SYSTEM v5.0 ${loadedCount < 27 ? `LOADING ${Math.round((loadedCount / 27) * 100)}%` : "LOADED"}`,
     "ONLINE - BEGINNING DIVE..."
   ];
 
@@ -34,14 +34,27 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
       const promises = Array.from({ length: total }, (_, i) => {
         return new Promise((resolve) => {
           const img = new Image();
-          img.src = new URL(`../assets/cut-in-${i + 1}.webp`, import.meta.url).href;
+          const imgUrl = cutInMap[i + 1];
+          
+          if (!imgUrl) {
+            console.warn(`Asset cut-in-${i + 1} not found in map`);
+            count++;
+            setLoadedCount(count);
+            resolve(null);
+            return;
+          }
+
+          img.src = imgUrl;
           const finish = () => {
             count++;
             setLoadedCount(count);
             resolve(null);
           };
           img.onload = finish;
-          img.onerror = finish;
+          img.onerror = () => {
+            console.error(`Failed to load asset: ${imgUrl}`);
+            finish();
+          };
         });
       });
       await Promise.all(promises);
@@ -69,7 +82,7 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
         initial={{ opacity: 0, scale: 1.1 }}
         animate={{ opacity: 0.75, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        src={p5Background} 
+        src="/images/p5-background.png" 
         alt="" 
         className="hidden lg:block absolute top-0 right-0 h-full w-auto object-cover pointer-events-none z-0 origin-right"
         referrerPolicy="no-referrer"
