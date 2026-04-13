@@ -5,28 +5,62 @@ import p5Background from "../assets/p5 background.png";
 
 export function BootScreen({ onComplete }: { onComplete: () => void }) {
   const [step, setStep] = useState(0);
+  const [loadedCount, setLoadedCount] = useState(0);
   const blink = useBlink(400);
+  
   const lines = [
     "COFFEE CUP FILLED",
     "COGNITIVE SCAN OK",
     "METAVERSE CALIBRATED",
-    "PERSONA SYSTEM v5.0 LOADED",
+    `PERSONA SYSTEM v5.0 LOADED (${Math.round((loadedCount / 27) * 100)}%)`,
     "ONLINE - BEGINNING DIVE..."
   ];
 
+  // Handle step animations
   useEffect(() => {
-    const timings = [0, 350, 700, 1050, 1400];
+    const timings = [0, 300, 600, 900];
     const timers = timings.map((ms, i) => {
       return setTimeout(() => setStep(i + 1), ms);
     });
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
+  // Handle asset preloading
+  useEffect(() => {
+    let count = 0;
+    const total = 27;
     
-    const finalTimer = setTimeout(onComplete, 2500);
-    
-    return () => {
-      timers.forEach(clearTimeout);
-      clearTimeout(finalTimer);
+    const preloadImages = async () => {
+      const promises = Array.from({ length: total }, (_, i) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = new URL(`../assets/cut-in-${i + 1}.webp`, import.meta.url).href;
+          const finish = () => {
+            count++;
+            setLoadedCount(count);
+            resolve(null);
+          };
+          img.onload = finish;
+          img.onerror = finish;
+        });
+      });
+      await Promise.all(promises);
     };
-  }, [onComplete]);
+
+    preloadImages();
+  }, []);
+
+  // Check for completion
+  useEffect(() => {
+    if (step === 4 && loadedCount >= 27) {
+      const nextStepTimer = setTimeout(() => setStep(5), 500);
+      return () => clearTimeout(nextStepTimer);
+    }
+    if (step === 5) {
+      const finalTimer = setTimeout(onComplete, 1000);
+      return () => clearTimeout(finalTimer);
+    }
+  }, [loadedCount, step, onComplete]);
 
   return (
     <div className="bg-black h-screen flex flex-col justify-center px-16 lg:px-32 relative overflow-hidden">
@@ -73,8 +107,8 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
       <div className="absolute bottom-16 left-16 right-16 h-1 bg-gray-900 overflow-hidden">
         <motion.div 
           initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 2, ease: "linear" }}
+          animate={{ width: `${(step / lines.length) * 100}%` }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="h-full bg-p5-red"
         />
       </div>

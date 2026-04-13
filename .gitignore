@@ -6,7 +6,4 @@ coverage/
 *.log
 .env*
 !.env.example
-<<<<<<< Updated upstream
-=======
 .idea/
->>>>>>> Stashed changes

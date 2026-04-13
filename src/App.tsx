@@ -8,6 +8,7 @@ import { BootScreen } from "./components/BootScreen";
 import { Sidebar } from "./navigation/Sidebar";
 import { CustomCursor } from "./components/CustomCursor";
 import { TickerTape } from "./components/TickerTape";
+import { CutInAnimation } from "./components/animations/CutInAnimation";
 
 // Sections
 import { HomeSection } from "./pages/HomeSection";
@@ -24,6 +25,24 @@ export default function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [animStyle, setAnimStyle] = useState<AnimStyle>("phantom");
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [showCutIn, setShowCutIn] = useState(false);
+  const [cutInImage, setCutInImage] = useState("");
+  const [cutInKey, setCutInKey] = useState(0);
+
+  const triggerCutIn = useCallback(() => {
+    const randomNum = Math.floor(Math.random() * 27) + 1;
+    const imgUrl = new URL(`./assets/cut-in-${randomNum}.webp`, import.meta.url).href;
+    
+    // The images are already preloaded in the BootScreen, 
+    // but we still set the state to trigger the animation
+    setCutInImage(imgUrl);
+    setCutInKey(prev => prev + 1);
+    setShowCutIn(true);
+  }, []);
+
+  const handleCutInComplete = useCallback(() => {
+    setShowCutIn(false);
+  }, []);
 
   const currentTheme = THEME_COLORS[animStyle];
 
@@ -86,7 +105,12 @@ export default function App() {
         
         <Sidebar 
           activeSection={activeSection} 
-          setActiveSection={setActiveSection} 
+          setActiveSection={(id) => {
+            if (id !== "home" && id !== activeSection) {
+              triggerCutIn();
+            }
+            setActiveSection(id);
+          }} 
           currentTheme={currentTheme} 
           isCollapsed={isSidebarCollapsed}
           setIsCollapsed={setIsSidebarCollapsed}
@@ -143,6 +167,13 @@ export default function App() {
       </div>
 
       <TickerTape currentTheme={currentTheme} />
+      
+      <CutInAnimation 
+        key={cutInKey}
+        imageUrl={cutInImage} 
+        isVisible={showCutIn} 
+        onComplete={handleCutInComplete} 
+      />
     </div>
   );
 }
