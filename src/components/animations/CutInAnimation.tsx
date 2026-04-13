@@ -13,7 +13,7 @@ export function CutInAnimation({ imageUrl, isVisible, onComplete }: CutInAnimati
     if (isVisible) {
       const timer = setTimeout(() => {
         onComplete();
-      }, 600);
+      }, 700);
       return () => clearTimeout(timer);
     }
   }, [isVisible, onComplete]);
@@ -23,14 +23,13 @@ export function CutInAnimation({ imageUrl, isVisible, onComplete }: CutInAnimati
       {isVisible && (
         <div className="fixed inset-0 pointer-events-none z-[100] flex items-center lg:items-end justify-center lg:justify-end overflow-hidden">
           <motion.div
-            initial={{ x: "100%", opacity: 1, scaleY: 1 }}
-            animate={{ x: "0%", opacity: 1, scaleY: 1 }}
+            initial={{ x: "100%", opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
+            animate={{ x: "0%", opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
             exit={{ 
-              scaleY: 0, 
+              clipPath: "inset(0% 100% 0% 0%)",
               opacity: 0,
               transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1] }
             }}
-            style={{ originY: 0.5 }} 
             transition={{ 
               type: "spring", 
               damping: 15, 
