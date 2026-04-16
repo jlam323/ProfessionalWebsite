@@ -9,14 +9,28 @@ interface CutInAnimationProps {
 }
 
 export function CutInAnimation({ imageUrl, isVisible, onComplete }: CutInAnimationProps) {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   useEffect(() => {
     if (isVisible) {
+      // Reset loaded state when it becomes visible
+      setIsImageLoaded(false);
+      
+      // Pre-check if image is already cached
+      const img = new Image();
+      img.src = imageUrl;
+      if (img.complete) {
+        setIsImageLoaded(true);
+      } else {
+        img.onload = () => setIsImageLoaded(true);
+      }
+
       const timer = setTimeout(() => {
         onComplete();
       }, 700);
       return () => clearTimeout(timer);
     }
-  }, [isVisible, onComplete]);
+  }, [isVisible, imageUrl, onComplete]);
 
   return (
     <AnimatePresence>
@@ -53,7 +67,7 @@ export function CutInAnimation({ imageUrl, isVisible, onComplete }: CutInAnimati
             {/* Character Image */}
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: isImageLoaded ? 1 : 0, scale: isImageLoaded ? 1 : 1.1 }}
               transition={{ 
                 duration: 0.2,
                 delay: 0.1
@@ -65,6 +79,7 @@ export function CutInAnimation({ imageUrl, isVisible, onComplete }: CutInAnimati
                 alt="Cut-in" 
                 className="w-full h-full object-contain filter drop-shadow-[10px_10px_0px_rgba(0,0,0,0.5)]"
                 referrerPolicy="no-referrer"
+                onLoad={() => setIsImageLoaded(true)}
               />
               
               {/* Impact Lines Effect */}

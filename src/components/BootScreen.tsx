@@ -28,33 +28,36 @@ export function BootScreen({ onComplete }: { onComplete: () => void }) {
   // Handle asset preloading
   useEffect(() => {
     let count = 0;
-    const total = 27;
+    const cutInUrls = Object.values(cutInMap);
+    const totalAssets = cutInUrls.length + 1; // +1 for background
     
+    // Keep references to prevent GC
+    const preloadedImages: HTMLImageElement[] = [];
+
     const preloadImages = async () => {
-      const promises = Array.from({ length: total }, (_, i) => {
+      const allUrls = [...cutInUrls, "/images/p5-background.png"];
+      
+      const promises = allUrls.map((url) => {
         return new Promise((resolve) => {
           const img = new Image();
-          const imgUrl = cutInMap[i + 1];
+          img.src = url;
+          preloadedImages.push(img);
           
-          if (!imgUrl) {
-            console.warn(`Asset cut-in-${i + 1} not found in map`);
-            count++;
-            setLoadedCount(count);
-            resolve(null);
-            return;
-          }
-
-          img.src = imgUrl;
           const finish = () => {
             count++;
-            setLoadedCount(count);
+            setLoadedCount(prev => Math.min(prev + 1, 27)); // Keep UI count at 27 for the lines
             resolve(null);
           };
-          img.onload = finish;
-          img.onerror = () => {
-            console.error(`Failed to load asset: ${imgUrl}`);
+
+          if (img.complete) {
             finish();
-          };
+          } else {
+            img.onload = finish;
+            img.onerror = () => {
+              console.error(`Failed to load asset: ${url}`);
+              finish();
+            };
+          }
         });
       });
       await Promise.all(promises);
