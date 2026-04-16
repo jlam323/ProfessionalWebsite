@@ -20,6 +20,11 @@ interface HomeSectionProps {
 export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSectionProps) {
   const [isHoveringPrompt, setIsHoveringPrompt] = useState(false);
 
+  const currentDate = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric'
+  }).format(new Date()).toUpperCase();
+
   return (
     <div className="h-full flex flex-col items-center justify-center relative py-12">
       {/* Style Switcher */}
@@ -219,7 +224,7 @@ export function HomeSection({ animStyle, setAnimStyle, currentTheme }: HomeSecti
         </div>
         <div className="text-right">
           <p className="font-mono text-[10px] opacity-50 uppercase">Current Date</p>
-          <p className="font-display font-black italic text-2xl">APRIL 10</p>
+          <p className="font-display font-black italic text-2xl">{currentDate}</p>
         </div>
       </div>
     </div>
