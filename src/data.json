@@ -21,12 +21,12 @@
     {
       "title": "PLAN OF RECORD (POR)",
       "tags": ["Real-time Messaging", "System Integration", "AWS"],
-      "desc": "Created a systematic integration standard for external airplane carriers to send real-time flight movement messages, enabling high-impact live decisions."
+      "desc": "Created a systematic integration standard for external airplane carriers companies to send real-time flight movement messages to Amazon, enabling AIR network visibility to make high-impact live decisions."
     },
     {
       "title": "GLOBAL CARGO EXPANSION",
       "tags": ["Business Growth", "International Dev", "React"],
-      "desc": "Led the dev-side expansion of US cargo flight business to Canada, Europe, and India, growing the business globally by ~285%."
+      "desc": "Led the dev-side expansion of US cargo flight business to Canada, Europe, India, intercontinental, and US-Hawaii express, growing the business globally by ~285% from 2019-2023."
     }
   ],
   "experience": [
@@ -42,7 +42,7 @@
         "Facilitated an annual cost savings of over $140MM through network planning optimization.",
         "Orchestrated multiple peak operation preparations (ORR) as the org leader and bar raiser."
       ],
-      "tags": ["GEN AI", "NETWORK PLANNING", "AWS", "OPTIMIZATION"]
+      "tags": ["GEN AI", "AWS", "REACT", "JAVA", "PROJECT MANAGEMENT"]
     },
     {
       "company": "AMAZON",
@@ -56,7 +56,7 @@
         "Grew the business globally by ~285% from 2019-2023 through strategic carrier integrations.",
         "Established robust operational practices with monitoring, dashboards, and reliability-focused design."
       ],
-      "tags": ["SYSTEM INTEGRATION", "GLOBAL EXPANSION", "AWS", "MONITORING"]
+      "tags": ["AWS", "REACT", "JAVA", "PROJECT MANAGEMENT", "GLOBAL EXPANSION"]
     },
     {
       "company": "AMAZON",
@@ -69,7 +69,7 @@
         "Pioneered Native AWS development by being one of the earliest fully NAWS cloud-based systems in the org.",
         "Championed ReactJS as the standard for all Air UI pages, driving large-scale migrations from legacy jQuery."
       ],
-      "tags": ["REACT", "AWS", "SYSTEM DESIGN", "FOUNDATIONAL"]
+      "tags": ["AWS", "REACT", "JAVA"]
     },
     {
       "company": "TD BANK",
@@ -83,7 +83,7 @@
         "Developed an automated tool for managing web service certificate expiries, reducing production issues.",
         "Led an associate project team of 11 to develop a full-stack tool revamping the associate program."
       ],
-      "tags": ["REACT NATIVE", "MICROSERVICES", "SPRING BOOT", "ANGULAR"]
+      "tags": ["REACT NATIVE (MOBILE)", "JAVA", "ANGULAR"]
     }
   ],
   "awards": [
@@ -143,14 +143,13 @@
     }
   ],
   "skills": {
-    "languages": ["AWS", "JAVA", "JAVASCRIPT", "REACT", "SPRING", "PYTHON", "C++", "C#", "MYSQL", "DOCKER", "AZURE", "GCP"],
+    "languages": ["AWS", "JAVA", "REACT JS", "REACT NATIVE", "ANGULAR", "PYTHON", "C++", "C#", "SQL/NOSQL", "AZURE", "GOOGLE CLOUD"],
     "specialties": [
       "DISTRIBUTED SYSTEMS",
       "CLOUD-NATIVE ARCHITECTURE",
       "FULL-STACK DEVELOPMENT",
-      "SYSTEM INTEGRATION",
       "GEN AI AUTOMATION",
-      "NETWORK PLANNING"
+      "NETWORK OPTIMIZATION"
     ]
   },
   "education": {

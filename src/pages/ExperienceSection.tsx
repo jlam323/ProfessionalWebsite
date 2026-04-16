@@ -21,15 +21,15 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
       
       <div className="flex flex-col md:flex-row gap-0 flex-1 min-h-0">
         {/* Role selector — slanted tabs */}
-        <div className="w-full md:w-[200px] flex-shrink-0 flex md:flex-col gap-3 p-2 md:pr-6 overflow-x-auto md:overflow-x-visible no-scrollbar">
+        <div className="w-full md:w-[220px] flex-shrink-0 flex md:flex-col gap-3 p-2 md:pr-6 overflow-x-auto md:overflow-x-visible no-scrollbar">
           {experiences.map((exp, idx) => (
             <button
               key={idx}
               onClick={() => setActiveExp(idx)}
-              className={`px-4 py-3 lg:px-6 lg:py-4 transition-all relative cursor-pointer transform -skew-x-12 border-l-8 text-left group ${
+              className={`px-4 py-3 lg:px-6 lg:py-4 transition-all relative cursor-pointer transform -skew-x-12 border-l-[12px] text-left group ${
                 activeExp === idx 
                   ? "border-white shadow-[8px_8px_0px_#000] z-10" 
-                  : "bg-p5-black border-p5-red/30 opacity-60 hover:opacity-100"
+                  : "bg-p5-black border-p5-gray opacity-60 hover:opacity-100"
               }`}
               style={{ backgroundColor: activeExp === idx ? currentTheme.primary : undefined }}
             >
@@ -39,10 +39,10 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                   className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent pointer-events-none" 
                 />
               )}
-              <div className={`font-display text-base font-black tracking-tighter transform skew-x-12 leading-none transition-colors ${activeExp === idx ? "text-white" : "p5-red-text"}`}>
+              <div className={`font-display text-base font-black tracking-tighter transform skew-x-12 leading-none transition-colors ${activeExp === idx ? "text-white" : "text-gray-500"}`}>
                 {exp.company}
               </div>
-              <div className={`font-mono text-[9px] mt-2 transform skew-x-12 font-bold ${activeExp === idx ? "text-white" : "text-gray-600"}`}>
+              <div className={`font-mono text-[11px] mt-2 transform skew-x-12 font-bold ${activeExp === idx ? "text-white" : "text-gray-600"}`}>
                 {exp.period}
               </div>
               
@@ -143,10 +143,6 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                         >
                           <Star size={14} className="fill-white text-white" />
                         </motion.div>
-                        <motion.div 
-                          animate={{ backgroundColor: currentTheme.accent }}
-                          className="absolute -top-1 -right-1 w-2 h-2 transform rotate-45 opacity-50"
-                        />
                       </div>
                     </div>
                     <p className="font-mono text-sm text-p5-black font-bold leading-relaxed bg-p5-white/90 p-2 transform -skew-x-1 shadow-[4px_4px_0px_#000] w-full">
@@ -161,9 +157,15 @@ export function ExperienceSection({ currentTheme }: { currentTheme: ThemeColors 
                   <motion.span 
                     key={tag} 
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1, boxShadow: `4px 4px 0px ${currentTheme.accent}` }}
-                    whileHover={{ backgroundColor: currentTheme.primary }}
-                    transition={{ delay: 0.5 + i * 0.05 }}
+                    animate={{ 
+                      scale: 1, 
+                      boxShadow: `4px 4px 0px ${currentTheme.accent}`,
+                      transition: { delay: 0.5 + i * 0.05 }
+                    }}
+                    whileHover={{ 
+                      backgroundColor: currentTheme.primary,
+                      transition: { delay: 0, duration: 0.2 }
+                    }}
                     className="font-display text-xs font-black text-white bg-p5-black px-4 py-2 transform -skew-x-12 tracking-widest transition-colors cursor-default"
                   >
                     {tag}
