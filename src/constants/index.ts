@@ -6,14 +6,15 @@ import {
   Star,
   Trophy,
   Home,
-  Mail
+  Mail,
+  GitBranch
 } from "lucide-react";
 import { Section, AnimStyle, ThemeColors, HomeAnimation } from "../types";
 
 export const SECTIONS: Section[] = [
   { id: "about", label: "ABOUT", icon: User },
   { id: "experience", label: "EXPERIENCE", icon: Briefcase },
-  { id: "projects", label: "PROJECTS", icon: Star },
+  { id: "projects", label: "SIDE PROJECTS", icon: GitBranch },
   { id: "awards", label: "AWARDS", icon: Trophy },
   { id: "skills", label: "SKILLS", icon: Code2 },
   { id: "contact", label: "CONTACT", icon: Mail },

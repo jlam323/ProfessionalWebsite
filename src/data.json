@@ -14,19 +14,18 @@
   },
   "projects": [
     {
-      "title": "AIR NETWORK VISION",
-      "tags": ["GenAI", "Network Planning", "Optimization"],
-      "desc": "Composed the 5-year vision for Amazon Air's network planning systems, incorporating Generative AI for automation and optimizing cross-org integrations."
+      "title": "Poke-Map",
+      "tags": ["2D", "Pixel", "Game", "React"],
+      "desc": "Grid-based 2D-pixel exploration demo built with React, TypeScript, and Canvas, inspired by a particular popular childhood game. It features multiple handheld console overlays.",
+      "images": ["/images/pokemap-1.png", "/images/pokemap-2.png"],
+      "link": "https://jonalam.com/pokemap"
     },
-    {
-      "title": "PLAN OF RECORD (POR)",
-      "tags": ["Real-time Messaging", "System Integration", "AWS"],
-      "desc": "Created a systematic integration standard for external airplane carriers companies to send real-time flight movement messages to Amazon, enabling AIR network visibility to make high-impact live decisions."
-    },
-    {
-      "title": "GLOBAL CARGO EXPANSION",
-      "tags": ["Business Growth", "International Dev", "React"],
-      "desc": "Led the dev-side expansion of US cargo flight business to Canada, Europe, India, intercontinental, and US-Hawaii express, growing the business globally by ~285% from 2019-2023."
+        {
+      "title": "Tile Grid Studio",
+      "tags": ["Tool", "React"],
+      "desc": "A tool designed for mapping out grids used in 2D game development. It allows developers to import image assets and paint collision, terrain, or custom metadata labels onto a pixel-perfect grid..",
+      "images": ["/images/tilegridstudio.png"],
+      "link": "https://jonalam.com/tilegridstudio"
     }
   ],
   "experience": [
