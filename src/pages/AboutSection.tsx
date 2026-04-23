@@ -27,11 +27,11 @@ export function AboutSection({ currentTheme }: { currentTheme: ThemeColors }) {
       <motion.div 
         animate={isBugged ? { 
           rotate: [0, 75, 30, 65, 40, 55, 50],
-          y: [0, 0, 0, 0, 0, 200, 1000],
-          opacity: [1, 1, 1, 1, 1, 0.8, 0],
+          y: [0, 0, 0, 0, 0, 400, 2000],
+          opacity: [1, 1, 1, 1, 1, 1, 0.5],
           transition: { 
-            duration: 2, 
-            times: [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2], 
+            duration: 1.7, 
+            times: [0, 0.23, 0.46, 0.69, 0.85, 0.90, 1], 
           } 
         } : { 
           borderLeftColor: currentTheme.primary,
