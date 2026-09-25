@@ -14,13 +14,20 @@
   },
   "projects": [
     {
-      "title": "Poke-Map",
+      "title": "Flight Tracker",
+      "tags": ["Map", "Flights", "DeckGL", "React"],
+      "desc": "A real-time commercial flight radar and airspace visualization app built with React 19, TypeScript, Deck.gl, and MapLibre GL. It renders live flight locations, route arcs, and airport operations across North America and global airspace.",
+      "images": ["/images/flighttracker.png"],
+      "link": "https://jonalam.com/flighttracker"
+    },
+    {
+      "title": "PokeMap",
       "tags": ["2D", "Pixel", "Game", "React"],
       "desc": "Grid-based 2D-pixel exploration demo built with React, TypeScript, and Canvas, inspired by a particular popular childhood game. It features multiple handheld console overlays.",
       "images": ["/images/pokemap-1.png", "/images/pokemap-2.png"],
       "link": "https://jonalam.com/pokemap"
     },
-        {
+    {
       "title": "Tile Grid Studio",
       "tags": ["Tool", "React"],
       "desc": "A tool designed for mapping out grids used in 2D game development. It allows developers to import image assets and paint collision, terrain, or custom metadata labels onto a pixel-perfect grid..",
